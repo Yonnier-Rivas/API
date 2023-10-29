@@ -1,0 +1,109 @@
+JSON API DE CONSTRUCCION DE SOFTWARE IV
+ESTA API LA PROBRAMOS CON LA HERRAMIENTA DE POSTMAN
+
+Metodos para los autores
+Crear Autor 
+{
+    "id": "1edba20f-ff6a-4b71-b2ca-c5aff0a08885",
+    "nombre": "Gabriel Garcia Marquez",
+    "nacionalidad": "Colombiano"
+}
+
+{
+    "id": "66c59c84-11b2-43a0-9d73-3a55adaa36af",
+    "nombre": "Mario Mendoza",
+    "nacionalidad": "Colombiano"
+}
+
+{
+    "id": "61fda264-cc31-457f-b618-e1a4833299a6",
+    "nombre": "Paulo Coelho de Souza",
+    "nacionalidad": "Brasileño"
+}
+
+
+Obtener Autor por Id
+http://localhost:5257/api/v1/autores/1edba20f-ff6a-4b71-b2ca-c5aff0a08885/ObtenerAutorPorId
+
+Resultado
+{
+    "id": "1edba20f-ff6a-4b71-b2ca-c5aff0a08885",
+    "nombre": "Gabriel Garcia Marquez",
+    "nacionalidad": "Colombiano"
+}
+
+
+Actualizar Autor
+http://localhost:5257/api/v1/autores/1edba20f-ff6a-4b71-b2ca-c5aff0a08885/ActualizarAutor
+
+{
+    "id": "1edba20f-ff6a-4b71-b2ca-c5aff0a08885",
+    "nombre": "Gabriel Garcia Marquez",
+    "nacionalidad": "Mexicano"
+}
+
+
+Eliminar Autor
+http://localhost:5257/api/v1/autores/1edba20f-ff6a-4b71-b2ca-c5aff0a08885/EliminarAutor
+
+
+Metodos para libros
+Crear Libro
+{
+    "id": "77df265d-a162-4912-bf14-74b2eb129dbd",
+    "titulo": "El Zahir",
+    "resumen": "Un reconocido escritor de fama mundial descubre un día que su mujer, corresponsal de guerra, ha desaparecido sin dejar rastro. ¿Ha sido secuestrada, víctima de un atentado o simplemente se sentía insatisfecha con su matrimonio? Cuando su ausencia se convierte en una obsesión que no deja espacio para nada más, el narrador se propone encontrar las respuestas a todas las preguntas que se le han planteado y, abandonando la seguridad de su mundo de privilegios, inicia el camino hacia un destino desconocido.",
+    "autorId": "61fda264-cc31-457f-b618-e1a4833299a6"
+} 
+
+Nota: el autorId del libro El Zahir pertenece a Paulo Coehlo
+
+{
+    "id": "46bb430a-68bf-4b3f-8af3-e9640cdf95f8",
+    "titulo": "Satanás",
+    "resumen": "Una mujer hermosa e ingenua que roba con destreza a altos ejecutivos, un pintor habitado por fuerzas misteriosas, y un sacerdote que se enfrenta a un caso de posesión demoníaca en La Candelaria, el barrio colonial de Bogotá… historias que se tejen en torno a la de Campo Elías, héroe de la guerra de Vietnam, quien inicia su particular descenso a los infiernos obsesionado por la dualidad entre el bien y el mal, entre Jekyll y Hyde, y se convertirá en un ángel exterminador.",
+    "autorId": "66c59c84-11b2-43a0-9d73-3a55adaa36af"
+}
+
+Nota: el autorId de el libro Satanas pertenece a Mario Mendoza
+
+{
+    "id": "46bb430a-68bf-4b3f-8af3-e9640cdf95f8",
+    "titulo": "Satanás",
+    "resumen": "Una mujer hermosa e ingenua que roba con destreza a altos ejecutivos, un pintor habitado por fuerzas misteriosas, y un sacerdote que se enfrenta a un caso de posesión demoníaca en La Candelaria, el barrio colonial de Bogotá… historias que se tejen en torno a la de Campo Elías, héroe de la guerra de Vietnam, quien inicia su particular descenso a los infiernos obsesionado por la dualidad entre el bien y el mal, entre Jekyll y Hyde, y se convertirá en un ángel exterminador.",
+    "autorId": "66c59c84-11b2-43a0-9d73-3a55adaa36af"
+}
+
+{
+    "id": "f685f5e2-aabd-423d-83ab-f4b95b8a3bc8",
+    "titulo": "Cien de Años",
+    "resumen": "Entre la boda de José Arcadio Buendía con Amelia Iguarán hasta la maldición de Aureliano Babilonia transcurre todo un siglo. Cien años de soledad para una estirpe única, fantástica, capaz de fundar una ciudad tan especial como Macondo y de engendrar niños con cola de cerdo.",
+    "autorId": "1edba20f-ff6a-4b71-b2ca-c5aff0a08885"
+}
+
+Nota: el autorId del libro Cien años de soledad pertenece a Gabriel Garcia Marquez pero este no se creo ya que antes habiamos eliminado a Gabriel Garcia Marquez de la Base de datos de autores, entonces tenemos la validacion de que si autorId no pertenece a ningun autor creado no se crea el libro
+
+Obtener Libro por Id
+http://localhost:5257/api/v1/libros/77df265d-a162-4912-bf14-74b2eb129dbd/ObtenerLibroPorId
+
+Resultado
+{
+    "id": "77df265d-a162-4912-bf14-74b2eb129dbd",
+    "titulo": "El Zahir",
+    "resumen": "Un reconocido escritor de fama mundial descubre un día que su mujer, corresponsal de guerra, ha desaparecido sin dejar rastro. ¿Ha sido secuestrada, víctima de un atentado o simplemente se sentía insatisfecha con su matrimonio? Cuando su ausencia se convierte en una obsesión que no deja espacio para nada más, el narrador se propone encontrar las respuestas a todas las preguntas que se le han planteado y, abandonando la seguridad de su mundo de privilegios, inicia el camino hacia un destino desconocido.",
+    "autorId": "61fda264-cc31-457f-b618-e1a4833299a6"
+}
+
+Actualizar Libro 
+http://localhost:5257/api/v1/libros/77df265d-a162-4912-bf14-74b2eb129dbd/ActualizarLibro
+
+{
+    "id": "77df265d-a162-4912-bf14-74b2eb129dbd",
+    "titulo": "El Zahir",
+    "resumen": "Un reconocido escritor de fama mundial descubre un día que su mujer, corresponsal de guerra, ha desaparecido sin dejar rastro. ¿Ha sido secuestrada, víctima de un atentado o simplemente se sentía insatisfecha con su matrimonio?",
+    "autorId": "61fda264-cc31-457f-b618-e1a4833299a6"
+}
+
+Eliminar Libro
+http://localhost:5257/api/v1/libros/77df265d-a162-4912-bf14-74b2eb129dbd/EliminarLibro
+
